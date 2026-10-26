@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Shopping List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1>🛒 My Shopping List</h1>
+    <p class="subtitle">Plan your shopping, track your spending.</p>
+
+    <form id="item-form">
+      <div class="input-group">
+        <input
+          type="text"
+          id="item-name"
+          placeholder="What do you need to buy?"
+          required
+        >
+        <input
+          type="number"
+          id="item-price"
+          placeholder="Price (KSh)"
+          min="0"
+          step="0.01"
+          required
+        >
+        <button type="submit" id="add-button">Add Item</button>
+      </div>
+    </form>
+
+    <section class="summary">
+      <p>Total items: <strong id="item-count">0</strong></p>
+      <p>Total cost: <strong id="total-cost">KSh 0.00</strong></p>
+    </section>
+
+    <ul id="shopping-list"></ul>
+
+    <p id="empty-message">Your shopping list is empty. Add your first item!</p>
+
+    <div class="actions">
+      <button id="mark-purchased" type="button">Mark Selected Purchased</button>
+      <button id="clear-list" type="button">Clear List</button>
+    </div>
+  </main>
+</body>
+</html>

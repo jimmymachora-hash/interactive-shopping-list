@@ -1,0 +1,178 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  color: #263238;
+  min-height: 100vh;
+  padding: 40px 16px;
+}
+
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  color: #176b52;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #687780;
+  margin-bottom: 28px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input {
+  min-width: 0;
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccd5dc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+#add-button {
+  background: #176b52;
+  color: white;
+}
+
+#add-button:hover {
+  background: #10523e;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: #e8f5ee;
+  padding: 16px;
+  border-radius: 10px;
+  margin: 24px 0;
+}
+
+#shopping-list {
+  list-style: none;
+}
+
+.shopping-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-bottom: 1px solid #e4e9ed;
+}
+
+.item-details {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.item-price {
+  color: #176b52;
+  font-weight: bold;
+}
+
+.shopping-item.purchased {
+  background: #edf7ef;
+}
+
+.shopping-item.purchased .item-name {
+  text-decoration: line-through;
+  color: #78857c;
+}
+
+.item-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.edit-button {
+  background: #e3edf9;
+  color: #244e7a;
+}
+
+.purchase-button {
+  background: #dff3e5;
+  color: #176b52;
+}
+
+.delete-button {
+  background: #fde8e7;
+  color: #a52b27;
+}
+
+#empty-message {
+  text-align: center;
+  color: #7a858c;
+  padding: 24px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+#mark-purchased {
+  background: #176b52;
+  color: white;
+  flex: 1;
+}
+
+#clear-list {
+  background: #b52f2a;
+  color: white;
+  flex: 1;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #87b8a5;
+  outline-offset: 2px;
+}
+
+@media (max-width: 520px) {
+  .container {
+    padding: 20px;
+  }
+
+  .shopping-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .item-actions {
+    width: 100%;
+  }
+}
